@@ -25,6 +25,7 @@ pip install scikit-learn pandas
 **Selecting Features and Target Variable:**
 
 X = player_stats_df_rec[['Y/R', 'Y/Tgt', 'R/G', 'TD', 'Fmb']]
+
 y = player_stats_df_rec['Points']  # Assuming 'Points' column exists
 
 The script selects features related to player performance (e.g., yards per reception, touchdowns) and uses the Points column as the target variable.
@@ -38,6 +39,7 @@ The data is split into 80% training and 20% test sets to ensure the model can be
 **Building and Training the Linear Regression Model:**
 
 lr_model = LinearRegression()
+
 lr_model.fit(X_train, y_train)
 
 The script uses scikit-learn’s LinearRegression model to learn a relationship between the selected features and the points scored.
