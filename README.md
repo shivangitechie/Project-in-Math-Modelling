@@ -24,7 +24,7 @@ This project aims to analyze NFL data through a series of steps involving data g
 
 ## Results:
 
-Example Snapshot: Display a few rows from each collected dataset to illustrate the kind of data being worked with.
+![image](https://github.com/user-attachments/assets/da44615b-92dd-4a9a-b86b-6466b3f69fa1)
 
 # 2. Data Preprocessing
 
