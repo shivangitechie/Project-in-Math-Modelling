@@ -1,4 +1,4 @@
-# NFL Data Analysis and Modeling Project
+# **NFL Data Analysis and Modeling Project**
 
 This project aims to analyze NFL data through a series of steps involving data gathering, preprocessing, labeling, and advanced modeling techniques. The workflow includes various stages: from collecting and preparing data to developing and evaluating models. This README provides an overview of each step, along with insights and practical details.
 
