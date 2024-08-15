@@ -56,7 +56,7 @@ Deep Learning Model Accuracy: 0.85
 
 Linear Regression Model MSE: 12.34
 
-** Interpretation of Results**
+**Interpretation of Results**
 
 Deep Learning Model Accuracy: Measures how well the classification model predicts the correct labels. Higher accuracy indicates better performance.
 
