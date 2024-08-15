@@ -1,16 +1,16 @@
-**README for game_stats_preprocessing.py**
+# **README for game_stats_preprocessing.py**
 
-**Overview**
+## **Overview**
 
 This script preprocesses NFL game data by performing various data cleaning and transformation steps. It processes a DataFrame containing game statistics, including dropping irrelevant columns, renaming columns, converting data types, and handling missing values.
 
-**Requirements**
+### **Requirements**
 
 Python 3.x
 
 pandas (for data manipulation)
 
-**Installation**
+### **Installation**
 
 **Install Required Libraries:**
 
@@ -18,7 +18,7 @@ Ensure you have pandas installed. You can install it using pip:
 
 *pip install pandas*
 
-Script Details
+### Script Details
 
 **Drop Columns:**
 
@@ -113,4 +113,4 @@ print(games_df.dtypes)
 
 games_df.head()
 
-**Note**: Ensure the games_df DataFrame is loaded or defined before running this script.
+### **Note**: Ensure the games_df DataFrame is loaded or defined before running this script.
