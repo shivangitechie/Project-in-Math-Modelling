@@ -1,10 +1,10 @@
-**README for unstructured_text_preprocessing.py**
+# **README for unstructured_text_preprocessing.py**
 
-**Overview**
+## **Overview**
 
 This script combines text from multiple sources into a single file, performs text cleaning, lemmatization, and Named Entity Recognition (NER) using SpaCy and NLTK, and then saves the processed results.
 
-**Functionality**
+### **Functionality**
 
 **Combine Text Files:**
 
@@ -26,14 +26,14 @@ Uses SpaCy for lemmatization, reducing words to their base forms.
 
 Extracts named entities and their types (e.g., person, organization) using SpaCy's NER capabilities.
 
-**Output:**
+### **Output:**
 
 
 Prints the lemmatized words and named entities.
 
 Optionally saves the processed results to preprocessed_text.txt.
 
-**Requirements**
+### **Requirements**
 
 Python 3.x
 
@@ -43,7 +43,7 @@ spacy library
 
 SpaCy model: en_core_web_sm
 
-**Installation**
+### **Installation**
 
 Install the required libraries and SpaCy model using pip:
 
@@ -59,12 +59,12 @@ nltk.download('stopwords')
 
 nltk.download('punkt')
 
-**Usage**
+### **Usage**
 
 Place the text files (american_football_glossary.txt, all_weeks_usage_notes.txt, transcription.txt) in the same directory as the script.
 
 
-Run the script to combine and preprocess the text:
+**Run the script to combine and preprocess the text:**
 
 python text_preprocessing.py
 
