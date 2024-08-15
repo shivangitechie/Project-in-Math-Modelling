@@ -4,7 +4,7 @@
 
 This script uses a pre-trained Named Entity Recognition (NER) model from the Hugging Face Transformers library to identify and classify named entities within text data.
 
-File: ner_extraction.py
+File: NER.py
 
 ### **Dependencies**
 
@@ -77,7 +77,7 @@ Ensure that you have preprocessed text data saved as preprocessed_text.txt.
 
 **Run the script:**
 
-python ner_extraction.py
+python NER.py
 
 This script is useful for extracting entities like player names, teams, and other relevant terms from articles or reports in a fantasy football application.
 
