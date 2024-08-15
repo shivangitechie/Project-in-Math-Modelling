@@ -1,10 +1,10 @@
-**README for player_stats_rec_preprocessing.py**
+# **README for player_stats_rec_preprocessing.py**
 
-**Overview**
+## **Overview**
 
 This script processes NFL receiving player statistics, preparing the data for analysis or modeling. It focuses on cleaning data, handling non-numeric values, and ensuring data consistency.
 
-**Functionality**
+### **Functionality**
 
 **Clean Player Names:**
 
@@ -22,22 +22,24 @@ Converts various percentage and integer columns to numeric values with error han
 
 Fills missing values in key columns with zeros to ensure completeness of the dataset.
 
-**Verify Results:**
+### **Verify Results:**
 
 Prints data types and a preview of the DataFrame to confirm that the transformations have been applied correctly.
 
-**Requirements**
+### **Requirements**
 
 Python 3.x
 
 pandas library
 
-**Installation**
+### **Installation**
 
 Install the required library using pip:
 
 *pip install pandas*
 
-**Usage**
+### **Usage**
 
-Ensure that the player_stats_df_rec DataFrame containing receiving player statistics is loaded before running this script. The script will preprocess the data, making it ready for further analysis.
+Ensure that the player_stats_df_rec DataFrame containing receiving player statistics is loaded before running this script. 
+
+The script will preprocess the data, making it ready for further analysis.
