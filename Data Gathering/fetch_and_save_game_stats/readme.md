@@ -1,15 +1,16 @@
-**README for fetch_and_save_game_stats.py**
+# **README for fetch_and_save_game_stats.py**
 
-**Overview**
+## **Overview**
 
 This script fetches NFL game statistics for the year 2023 from Pro Football Reference and saves the data into a CSV file named games_stats.csv. The data includes information on game outcomes, scores, and various other metrics.
 
-**Requirements**
+### **Requirements**
 
 Python 3.x
+
 Pandas library
 
-**How to Use**
+### **How to Use**
 
 **Install required libraries:**
 
@@ -23,17 +24,17 @@ The script is straightforward to run. Simply execute it in your Python environme
 
 *python fetch_and_save_game_stats.py*
 
-**Output:**
+### **Output:**
 
 The script fetches the game statistics for the 2023 NFL season from the specified URL.
 It processes the first table found on the webpage as the game statistics table.
 The data is then saved into a CSV file named games_stats.csv in the same directory as the script.
 
-**Customization:**
+### **Customization:**
 
 If you need to fetch data for a different year or from a different source, you can modify the url_team_stats variable.
 
-**Files**
+### **Files**
 
 *fetch_and_save_game_stats.py*: The main script file.<br>
 
