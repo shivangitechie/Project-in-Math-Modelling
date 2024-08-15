@@ -44,7 +44,7 @@ This project aims to analyze NFL data through a series of steps involving data g
 
 ## Results:
 
-Before and After Comparison: Provide snapshots showing data before and after preprocessing.
+![image](https://github.com/user-attachments/assets/a5166fdf-6717-4cd7-bec8-5211c4991329)
 
 # 3. Data Labeling
 
@@ -54,9 +54,6 @@ Before and After Comparison: Provide snapshots showing data before and after pre
 
 **data_labeling.py**: Applies labels to the dataset based on performance metrics and outcomes.
 
-## Results:
-
-Example Labeled Data: Show a sample of the labeled dataset with explanations of the labels used.
 
 # 4. Named Entity Recognition (NER)
 
@@ -66,9 +63,6 @@ Example Labeled Data: Show a sample of the labeled dataset with explanations of 
 
 **unstructured_text_preprocessing.py**: Utilizes SpaCy to perform NER and extract named entities.
 
-## Results:
-
-NER Output Samples: Display examples of extracted named entities from the text data.
 
 # 5. Deep Learning Model
 
@@ -78,9 +72,6 @@ NER Output Samples: Display examples of extracted named entities from the text d
 
 **deep_learning_model.py**: Defines and trains a neural network model.
 
-## Results:
-
-Model Performance Metrics: Include metrics such as accuracy, precision, recall, and F1 score. Provide visualizations of training and validation loss.
 
 # 6. Histogram of Deep Learning Model Accuracy
 
@@ -92,7 +83,7 @@ Model Performance Metrics: Include metrics such as accuracy, precision, recall, 
 
 ## Results:
 
-Histogram Plot: Add the histogram image to illustrate the variability in model accuracy.
+![Classification_accuracy_2d](https://github.com/user-attachments/assets/47c94713-071b-41d3-9415-ff53e79bc168)
 
 # 7. Regression Model
 
@@ -102,9 +93,6 @@ Histogram Plot: Add the histogram image to illustrate the variability in model a
 
 **regression_model.py**: Implements a regression model to predict player or game performance.
 
-## Results:
-
-Regression Metrics: Include metrics such as R-squared, Mean Squared Error (MSE), and examples of predicted vs. actual values.
 
 # 8. Model Evaluation
 
@@ -114,9 +102,6 @@ Regression Metrics: Include metrics such as R-squared, Mean Squared Error (MSE),
 
 **model_evaluation.py**: Compares the performance of deep learning and regression models.
 
-## Results:
-
-Performance Comparison: Provide tables or charts comparing model performance.
 
 # 9. Player Comparison Radar Plot
 
@@ -128,7 +113,11 @@ Performance Comparison: Provide tables or charts comparing model performance.
 
 ## Results:
 
-Radar Charts: Include radar plots comparing different players.
+![comparison_plot](https://github.com/user-attachments/assets/ee327799-d6d9-4cc2-9e08-efd227753a7e)
+
+
+![Boom_Bust_Percentage](https://github.com/user-attachments/assets/2ba5b928-0ca5-4b53-a1bf-00c2c98a0544)
+
 
 # Detailed Analysis and Requirements
 
