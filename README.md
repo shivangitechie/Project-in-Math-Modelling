@@ -83,7 +83,8 @@ This project aims to analyze NFL data through a series of steps involving data g
 
 ## Results:
 
-![Classification_accuracy_2d](https://github.com/user-attachments/assets/47c94713-071b-41d3-9415-ff53e79bc168)
+![Classification_accuracy](https://github.com/user-attachments/assets/62c287f1-f97a-46c7-83ad-94d4ed586007)
+
 
 # 7. Regression Model
 
