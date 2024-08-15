@@ -1,6 +1,6 @@
-**README for audio_processing.py**
+# README for audio_processing.py
 
-**Overview**
+## Overview
 
 This script performs a series of tasks to process audio from YouTube:
 
@@ -14,7 +14,7 @@ Transcribes the audio chunks into text.
 
 Saves the transcription to a text file.
 
-**Requirements**
+### Requirements
 
 Python 3.x
 
@@ -26,9 +26,9 @@ SpeechRecognition (for transcribing audio)
 
 ffmpeg or libav (required by pydub for audio conversion)
 
-**Installation**
+### Installation
 
-Install Required Libraries:
+**Install Required Libraries:**
 
 Ensure you have the required Python libraries installed. You can install them using pip:
 
@@ -46,9 +46,9 @@ brew install ffmpeg
 
 *sudo apt-get install ffmpeg*
 
-**How to Use**
+### How to Use
 
-Download YouTube Audio:
+**Download YouTube Audio:**
 
 Define the youtube_url and output_file variables to specify the YouTube video URL and the desired output MP3 file path.
 
@@ -84,7 +84,7 @@ The transcriptions are saved to a text file specified by transcription_file_path
 
 *transcription.txt*: The file containing the transcriptions.
 
-**Notes**
+### Notes
 
 **Progress and Debugging**: The yt-dlp command includes options for showing progress and detailed output. Adjust these options as needed.
 
