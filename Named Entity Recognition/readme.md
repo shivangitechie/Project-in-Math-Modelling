@@ -6,7 +6,7 @@ This script uses a pre-trained Named Entity Recognition (NER) model from the Hug
 
 File: ner_extraction.py
 
-**Dependencies**
+### **Dependencies**
 
 Python 3.x
 
@@ -16,13 +16,13 @@ Pandas (pandas)
 
 NumPy (numpy)
 
-**Installation**
+### **Installation**
 
 Before running the script, make sure the necessary libraries are installed:
 
 pip install transformers pandas numpy
 
-**Code Explanation**
+### **Code Explanation**
 
 **Loading the Pre-trained NER Model:**
 
@@ -67,11 +67,11 @@ print(ner_df.head())
 The NER results are organized into a Pandas DataFrame for easier viewing and analysis.
 
 
-**Output**
+### **Output**
 
 The script prints out the first few rows of the DataFrame containing the identified named entities and their corresponding classifications.
 
-**How to Run**
+### **How to Run**
 
 Ensure that you have preprocessed text data saved as preprocessed_text.txt.
 
@@ -81,7 +81,7 @@ python ner_extraction.py
 
 This script is useful for extracting entities like player names, teams, and other relevant terms from articles or reports in a fantasy football application.
 
-**Next Steps**
+### **Next Steps**
 
 Extend the script to handle more complex text data.
 
