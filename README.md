@@ -30,6 +30,8 @@ This project aims to analyze NFL data through a series of steps involving data g
 
 **Objective**: Clean, transform, and structure raw data to prepare it for analysis and modeling.
 
+![DATA PREPROCESSING](https://github.com/user-attachments/assets/08ebdb6e-7282-4edb-bee0-65180ff580c3)
+
 ## Files:
 
 **game_stats_preprocessing.py**: Cleans and transforms game statistics data.
@@ -48,7 +50,31 @@ This project aims to analyze NFL data through a series of steps involving data g
 
 # 3. Data Labeling
 
-**Objective**: Label the data to prepare it for supervised learning, creating categories or outcomes for model training.
+## **Objective**: Label the data to prepare it for supervised learning, creating categories or outcomes for model training.
+
+## **Labels:** 
+
+**1. BOOM
+2. BUST
+3. PLAY MEANINGFUL MINUTES
+4. PLAY WITH INJURY**
+
+The labeling has been done using the following approach:
+
+1. PLAY WITH INJURY and PLAY MEANINGFUL MINUTES: using injury statistics data
+2. BOOM AND BUST: Using Sentiment Analysis and Statistical Data
+
+The labels are then Encoded as numbers using **One-hot-encoding**.
+
+## **One-Hot Encoding**: Each category is represented as a binary vector, where only one element is "1" (hot) and the rest are "0" (cold). 
+
+"Boom" → [1, 0, 0, 0]
+
+"Bust" → [0, 1, 0, 0]
+
+"Play Meaningful Minutes" → [0, 0, 1, 0]
+
+"Play with Injury" → [0, 0, 0, 1]
 
 ## Files:
 
