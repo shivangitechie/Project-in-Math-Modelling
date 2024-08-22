@@ -81,7 +81,9 @@ The labels are then Encoded as numbers using **One-hot-encoding**.
 **data_labeling.py**: Applies labels to the dataset based on performance metrics and outcomes.
 
 
-# 4. Named Entity Recognition (NER)
+# 4. Named Entity Recognition (NER) and Sentiment Analysis for Labeling
+
+## NER
 
 **Objective**: Extract and classify entities from unstructured text data to identify key components such as players, teams, and locations.
 
@@ -117,6 +119,33 @@ The final output is a sequence of entity tags corresponding to each input token:
 
 ["Tom" → "PLAYER_NAME", "Brady" → "PLAYER_NAME", "threw" → "O", "3" → "O", "touchdowns" → "O", "for" → "O", "the" → "O", "Buccaneers" → "TEAM_NAME"]
 
+## Sentiment Analysis
+
+Combining Named Entity Recognition (NER) with sentiment analysis can significantly enhance the understanding of context around the identified entities. In the Fantasy Football AI project, combining these techniques allows us to extract specific player mentions (through NER) and analyze the sentiment of the text associated with those mentions (through sentiment analysis). This approach helps determine not only which players are being discussed but also whether the discussion is positive, negative, or neutral—critical for predicting player performance.
+
+**Workflow**: Combining NER with Sentiment Analysis
+
+Use NER to identify relevant entities in the text, such as player names, teams, or injury mentions.
+
+Text: "Tom Brady's performance last night was phenomenal!"
+
+NER Output: [("Tom Brady", "PLAYER_NAME")]
+
+**Sentiment Analysis:**
+
+Perform sentiment analysis on the text to determine whether it conveys a positive, negative, or neutral sentiment.
+
+Sentiment Output: Positive (Score: 0.92)
+
+**Contextual Linking:**
+
+Link the identified entities to the sentiment analysis results. This way, we know which sentiment corresponds to which player or team.
+
+"Tom Brady" → Positive Sentiment (Score: 0.92)
+
+The labels **BOOM** and **BUST** are assigned to players based on these sentiment analysis scores.
+
+The entire data is the then combined together to be fed to the *Deep Learning Model* and *Linear Regression Model*.
 
 ## Files:
 
@@ -127,6 +156,31 @@ The final output is a sequence of entity tags corresponding to each input token:
 
 **Objective**:Develop a deep learning model to predict player performance or game outcomes based on preprocessed features.
 
+![image](https://github.com/user-attachments/assets/cadb47e1-07b5-4866-ad17-63bfa9a507a3)
+
+## Input Layer:
+
+The input layer is where the model receives data. Each neuron in this layer corresponds to a feature in the dataset (e.g., player stats, game scores).
+It simply passes the data into the next layer for further processing.
+
+## Hidden Layers:
+
+Hidden layers are where the actual learning happens. These layers consist of multiple neurons, each performing computations on the input data.
+
+**Activation Functions**: Neurons in hidden layers often use activation functions like ReLU, which introduce non-linearity, enabling the model to learn complex patterns.
+
+**Purpose**: Each hidden layer extracts different levels of features or patterns from the input data. For instance, in our fantasy football model, one layer might learn patterns related to player performance, while another might capture correlations between injuries and game outcomes.
+
+## Output Layer:
+
+The output layer produces the final prediction or classification based on the processed information from hidden layers.
+
+**Activation Function**: In classification tasks, the output layer usually uses a softmax function, which outputs probabilities for each class (e.g., predicting whether a player is a "Boom," "Bust," etc.).
+
+## Dropout Layers (Optional):
+
+Dropout layers are used to prevent overfitting by randomly disabling some neurons during training, encouraging the model to generalize better to new data.
+
 ## Files:
 
 **deep_learning_model.py**: Defines and trains a neural network model.
@@ -134,7 +188,7 @@ The final output is a sequence of entity tags corresponding to each input token:
 
 # 6. Histogram of Deep Learning Model Accuracy
 
-**Objective**: Visualize the distribution of model accuracy across different evaluation runs.
+**Objective**: Visualize the distribution of model accuracy across the test data. 
 
 ## Files:
 
@@ -148,6 +202,37 @@ The final output is a sequence of entity tags corresponding to each input token:
 # 7. Regression Model
 
 **Objective**: Build and evaluate a regression model to predict continuous outcomes using numerical features.
+
+## Input Features:
+
+The input features could include a variety of factors such as:
+
+Player statistics (yards, touchdowns, completion percentage, etc.)
+
+Injury status (whether a player is fully fit, slightly injured, etc.)
+
+## Linear Relationship:
+
+The Linear Regression model assumes that these input features have a linear relationship with the target variable (fantasy points). For instance, more touchdowns and better sentiment might linearly increase the predicted points.
+
+## Model Training:
+
+The model is trained on historical data. It learns the relationship between player statistics and the fantasy points they actually scored in past games. The model adjusts the weights for each feature to minimize the prediction error (e.g., using Mean Squared Error).
+
+## Prediction:
+
+Once trained, the model can predict the fantasy points a player might score in a future game, given new input data (like updated stats or sentiment).
+
+## Evaluating the Model
+
+In this project, we evaluate the Linear Regression model using the Mean Squared Error (MSE) metric, which measures the average squared difference between the actual points and the predicted points. A lower MSE indicates a better fit.
+
+
+## Why Linear Regression?
+
+Even though deep learning models are more sophisticated, Linear Regression serves as a baseline model. It provides a straightforward benchmark to compare how much value more complex models (like deep learning) bring. While Linear Regression is limited in capturing non-linear relationships, it’s simple and interpretable, making it useful for quick initial predictions.
+
+![image](https://github.com/user-attachments/assets/7898364f-4262-4e56-ae85-8c6b12245385)
 
 ## Files:
 
