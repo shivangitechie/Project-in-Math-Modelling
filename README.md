@@ -59,6 +59,9 @@ This project aims to analyze NFL data through a series of steps involving data g
 
 **Objective**: Extract and classify entities from unstructured text data to identify key components such as players, teams, and locations.
 
+![image](https://github.com/user-attachments/assets/73ce942d-8ee2-4eb6-aa9f-501f9021cedd)
+
+
 ## Files:
 
 **unstructured_text_preprocessing.py**: Utilizes SpaCy to perform NER and extract named entities.
