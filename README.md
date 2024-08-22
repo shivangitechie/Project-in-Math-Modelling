@@ -61,6 +61,36 @@ This project aims to analyze NFL data through a series of steps involving data g
 
 ![image](https://github.com/user-attachments/assets/73ce942d-8ee2-4eb6-aa9f-501f9021cedd)
 
+**A Named Entity Recognition (NER)** model is typically implemented as a sequence labeling model that takes a piece of text as input and classifies each word (or token) into predefined entity categories like "PERSON," "ORGANIZATION," "LOCATION," etc. For our Fantasy Football AI project, the NER model might be used to identify entities like player names, team names, injury mentions, and other relevant information from unstructured text data such as news articles, commentaries, or reports.
+
+### **Architecture of an NER Model:**
+
+**Input Layer:**
+
+The input is typically a sequence of words or tokens. For example:
+
+["Tom", "Brady", "threw", "3", "touchdowns", "for", "the", "Buccaneers"]
+
+**Word Embeddings:**
+
+The words are converted into numerical representations using word embeddings (e.g., Word2Vec, GloVe, or contextual embeddings like BERT).
+
+For example:
+
+["Tom" → [0.12, -0.45, ...], "Brady" → [0.34, 0.67, ...], ...]
+
+**Sequence Model (Transformer):**
+
+The sequence of word embeddings is processed using a model that captures contextual information. 
+
+Each output vector is passed through a fully connected layer with a softmax activation function, which outputs a probability distribution over possible entity classes (e.g., "PLAYER_NAME," "TEAM_NAME," "O," etc.).
+
+**Output Layer (Entity Tags):**
+
+The final output is a sequence of entity tags corresponding to each input token:
+
+["Tom" → "PLAYER_NAME", "Brady" → "PLAYER_NAME", "threw" → "O", "3" → "O", "touchdowns" → "O", "for" → "O", "the" → "O", "Buccaneers" → "TEAM_NAME"]
+
 
 ## Files:
 
