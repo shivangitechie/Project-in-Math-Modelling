@@ -1,6 +1,30 @@
 # Table of Content
--[OVERVIEW](#overview)
--[Data Gathering](#data_gathering)
+
+  -[OVERVIEW](#overview)
+
+  -[Data Gathering](#data_gathering)
+
+  -[Data Pre-processing](#data_preprocessing)
+
+  -[Data Labeling](#data_labeling)
+
+  -[NER & Sentiment Analysis](#named_entity_recognition_(ner)_and_sentiment_analysis_for_labeling)
+
+  -[Deep Learning Model](#deep_learning_model)
+
+  -[Histogram of Deep Learning Model Accuracy](#histogram_of_deep_learning_model_accuracy)
+
+  -[Linear Regression Model](#regression_model)
+
+  -[Model Evaluation](#model_evaluation)
+
+  -[Player Comparison Radar Plot](#player_comparison_radar_plot)
+
+  -[Detailed Analysis and Requirements](#detailed_analysis_and_requirements)
+
+  -[Practical Usage](#practical_usage)
+
+  -[Future Steps](#future_steps)
 
 # **OVERVIEW**
 
