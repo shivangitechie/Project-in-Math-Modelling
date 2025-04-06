@@ -1,35 +1,33 @@
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.layers import Embedding, Conv1D, MaxPooling1D, Flatten, Dense
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-# Select features and labels
-X = player_stats_df_rec[['Y/R', 'Y/Tgt', 'R/G', 'TD', 'Fmb']]
-y = player_stats_df_rec['label']
+# Initialize tokenizer
+tokenizer = Tokenizer(num_words=5000)  # Keep top 5000 words
+tokenizer.fit_on_texts([" ".join(lemmatized_words)])  # Train tokenizer on cleaned text
 
-# Encode labels
-label_encoder = LabelEncoder()
-y_encoded = label_encoder.fit_transform(y)
+# Convert texts to sequences
+sequences = tokenizer.texts_to_sequences([" ".join(lemmatized_words)])
 
-# Split data into training and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.2, random_state=42)
+# Pad sequences to ensure uniform input size
+max_length = 100  # Choose max length based on dataset
+padded_sequences = pad_sequences(sequences, maxlen=max_length, padding="post")
 
-# Build deep learning model
+print(padded_sequences.shape)  # (1, max_length)
+
+# Define CNN model
 model = Sequential([
-    Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
-    Dropout(0.3),
-    Dense(32, activation='relu'),
-    Dropout(0.3),
-    Dense(16, activation='relu'),
-    Dropout(0.3),
-    Dense(4, activation='softmax')  # 4 output classes
+    Embedding(input_dim=5000, output_dim=128, input_length=max_length),  # Word embeddings
+    Conv1D(filters=64, kernel_size=3, activation="relu"),  # Convolution Layer
+    MaxPooling1D(pool_size=2),  # Downsampling
+    Flatten(),  # Flatten for Fully Connected Layer
+    Dense(64, activation="relu"),  # Fully Connected Layer
+    Dense(4, activation="softmax")  # 4 categories: Boom, Bust, Play with injury, Play meaningful minutes
 ])
 
-model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+# Compile model
+model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
 
-# Train the model
-model.fit(X_train, y_train, epochs=50, batch_size=32, validation_split=0.2)
-
-# Evaluate model
-test_loss, test_accuracy = model.evaluate(X_test, y_test)
-print(f"Test Accuracy: {test_accuracy:.2f}")
+# Show model summary
+model.summary()
